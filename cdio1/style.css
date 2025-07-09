@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background: hsl(210, 11%, 14%);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slider-container {
+  width: 70%;
+  max-width: 290px;
+  overflow: visible;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.info {
+  margin-top: -80px;
+  color: white;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.info p {
+  font-size: 16px;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.info h3 {
+  font-size: 20px;
+  margin: 4px 0 0 0;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #888;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #00f2ea;
+}
+.slide {
+  opacity: 0.5;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide được chọn sẽ có viền sáng */
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  border: 4px unset #00f2d6;   /* Viền xanh sáng */
+  border-radius: 20px; 
+   }        /* Bo tròn
+  

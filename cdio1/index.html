@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Slider</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slider-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: visible;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .slide {
+      flex: 1 1 0;
+      max-width: 220px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .slide:hover {
+      transform: translateY(-5px);
+    }
+
+    .slide img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 10px;
+    }
+
+    .info h3,
+    .info p {
+      margin: 5px 0;
+    }
+
+    .info h3 a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .info p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 1200px) {
+      .slider-container {
+        max-width: 1000px;
+      }
+
+      .slide {
+        max-width: 180px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .slider {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .slide {
+        max-width: 45%;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .slider {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .slide {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Slider</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .slider-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .slide {
+      flex: 1;
+      max-width: calc(20% - 16px);
+      /* 5 cards per row with gap */
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .slide:hover {
+      transform: translateY(-5px);
+    }
+
+    .slide img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 10px;
+    }
+
+    .info h3,
+    .info p {
+      margin: 5px 0;
+    }
+
+    .info h3 a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .info p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 1024px) {
+      .slide {
+        max-width: 100%;
+      }
+
+      .slider {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Slider</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      .slider-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 40px auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .slider {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .slide {
+        flex: 1;
+        max-width: calc(20% - 16px);
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+      }
+
+      .slide:hover {
+        transform: translateY(-5px);
+      }
+
+      .slide img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+      }
+
+      .info {
+        padding: 10px;
+      }
+
+      .info h3,
+      .info p {
+        margin: 5px 0;
+      }
+
+      .info h3 a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .info p {
+        font-size: 14px;
+        color: #777;
+      }
+
+      @media (max-width: 1024px) {
+        .slide {
+          max-width: 100%;
+        }
+
+        .slider {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #DDDDDD;">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img
+            src="https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/475775798_1348007679702746_2678338574905582759_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHIXHQUPtK3sNQzQqmiiUWNqGnXBLHDuAyoadcEscO4DM3X7gW70uyKEOWK2q1ZbPQuHmY9GvEwByMlLNN3nTid&_nc_ohc=vrizRaXjVzYQ7kNvwHi1P2W&_nc_oc=AdnD20LJltB-ELS7gE2IPiYlEYsCoX4r5tJ2bxu4Co6mBjCjXbz11Z8A__BloXmK1jY&_nc_zt=23&_nc_ht=scontent.fdad3-4.fna&_nc_gid=Fk-DgIrN2KhQJp47ntoGEQ&oh=00_AfQsaqFyC587vFGsYK5oZJ-IIFaJT8QAFXZkJiXy-fAlAg&oe=68715EEA">
+          <div class="info">
+            <h3><a href="dinhdot.html">Trần Hữu Định</a></h3>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img
+            src="https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/477244009_1692105931727068_4709718372377199687_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG4OE3GNobcG1TFDlkWlyySkQ-hgmQXjR-RD6GCZBeNH45dh6XwmBvbkov0SSFf7JZaWpDC-T54FjO94Ss3yL5g&_nc_ohc=yUHTStIPlb0Q7kNvwG5cJnI&_nc_oc=Adly1bDa8KuAN5Exk_BGBoyTF7YmhfIxs28ErtYUVgv4KVPx_XIhQjFc_JhXFeXlvbc&_nc_zt=23&_nc_ht=scontent.fdad3-4.fna&_nc_gid=uUaCleWLZylkn2bcd8dsGw&oh=00_AfQQJmT2ZD5f-aGfGUIN7JbYGPaLez2MHxgD2cHBKQmmOw&oe=6871576B"
+            alt="Product 3">
+          <div class="info">
+            <h3><a href="ledo.html">Nguyễn Lê Độ</a></h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://avatars.githubusercontent.com/u/193331512?v=4" alt="Product 2">
+          <div class="info">
+            <h3 style="white-space: nowrap; display: flex; justify-content: center; align-items: center; height: 100%;">
+              <a href="TranNguyenMinhCong.html">Trần Nguyễn Minh Công</a>
+            </h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://avatars.githubusercontent.com/u/94232709?s=400&amp;u=1427f55f50eef49f487429f40d487a3e56f28c66&amp;v=4"
+            alt="Product 4">
+          <div class="info">
+            <h3><a href="hy.html">Nguyễn Khang Hy</a></h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://ui-avatars.com/api/?name=Phan+Tuan+Kiet&background=random" alt="Product 5">
+          <div class="info">
+            <h3><a href="kiet.html">Phan Tuấn Kiệt</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
